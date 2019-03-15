@@ -3,6 +3,9 @@
 #include "geometry_msgs/Vector3.h"
 #include "ball_chaser/DriveToTarget.h"
 
+float MAX_LINEAR_X = 1;
+float MAX_ANGULAR_Z = 2;
+
 // ROS::Publisher motor commands;
 ros::Publisher motor_command_publisher;
 
@@ -13,21 +16,21 @@ bool handle_drive_request(ball_chaser::DriveToTarget::Request& req, ball_chaser:
   geometry_msgs::Twist cmd_vel;
   geometry_msgs::Vector3 linear, angular;
   
-  linear.x = req.linear_x;
+  linear.x = std::min((float)std::max((float)req.linear_x, -MAX_LINEAR_X), MAX_LINEAR_X);
   linear.y = 0;
   linear.z = 0;
   
   angular.x = 0;
   angular.y = 0;
-  angular.z = req.angular_z;
+  angular.z = std::min((float)std::max((float)req.angular_z, -MAX_ANGULAR_Z), MAX_ANGULAR_Z);
   
   cmd_vel.linear = linear;
   cmd_vel.angular = angular;
   
   motor_command_publisher.publish(cmd_vel);
   
-  std::string resStr = "Sent cmd_vel: linear_x: " + std::to_string(req.linear_x) 
-    + " angular: " + std::to_string(req.angular_z);
+  std::string resStr = "Sent cmd_vel: linear_x: " + std::to_string(linear.x) 
+    + " angular: " + std::to_string(angular.z);
   ROS_INFO_STREAM(resStr);
   res.msg_feedback = resStr;
   
