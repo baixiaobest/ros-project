@@ -1,0 +1,9 @@
+<launch>
+<arg name="map_file" default="$(find where_am_i)/maps/map.yaml"/>
+
+<node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+<node name="amcl" pkg="amcl" type="amcl" output="screen"> 
+	
+</node>
+<node name="move_base"/>
+</launch>
