@@ -1,7 +1,7 @@
 prefix=/home/workspace/ros-project/devel
 
-Name: where_am_i
-Description: Description of where_am_i
+Name: map_my_world
+Description: Description of map_my_world
 Version: 0.0.0
 Cflags: 
 Libs: -L/home/workspace/ros-project/devel/lib 
