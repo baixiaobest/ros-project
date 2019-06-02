@@ -1,8 +1,0 @@
-prefix=/home/workspace/ros-project/devel
-
-Name: ball_chaser
-Description: Description of ball_chaser
-Version: 0.0.0
-Cflags: -I/home/workspace/ros-project/devel/include
-Libs: -L/home/workspace/ros-project/devel/lib 
-Requires: 

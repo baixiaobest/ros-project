@@ -1,8 +1,0 @@
-prefix=/home/workspace/ros-project/devel
-
-Name: map_my_world
-Description: Description of map_my_world
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/workspace/ros-project/devel/lib 
-Requires: 
