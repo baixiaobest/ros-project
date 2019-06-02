@@ -1,8 +1,8 @@
 prefix=/home/workspace/ros-project/devel
 
-Name: turtlebot_bringup
-Description: Description of turtlebot_bringup
-Version: 2.4.2
+Name: pick_objects
+Description: Description of pick_objects
+Version: 0.0.0
 Cflags: 
 Libs: -L/home/workspace/ros-project/devel/lib 
 Requires: 
