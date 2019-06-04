@@ -8,6 +8,11 @@
   <!-- Example:  -->
   <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
   <maintainer email="root@todo.todo">root</maintainer>
+  
+  <depend>move_base_msgs</depend>
+  <depend>actionlib</depend>
+  <depend>roscpp</depend>
+  <depend>geometry_msgs</depend>
 
 
   <!-- One license tag required, multiple allowed, one license per tag -->
